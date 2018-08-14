@@ -79,4 +79,4 @@ RUN apk update; apk upgrade; \
 FROM alpine:3.7
 RUN mkdir /proxy && chmod 0777 /proxy
 COPY --from=builder /go/src/github.com/snail007/goproxy/proxy /proxy/
-CMD cd /proxy  && /proxy ${OPTS}
+CMD cd /proxy  && ./proxy ${OPTS}
